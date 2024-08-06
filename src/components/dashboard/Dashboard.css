@@ -1,0 +1,186 @@
+.home{
+    background-color: #060000;
+    padding: 20px;
+    display: flex;
+    gap:20px;
+    box-sizing: border-box;
+}
+.sidebar{
+    background-color: #07150f;
+    border-radius: 10px;
+}
+.icon-bg{    
+    background-color: #082c1d;
+    display: flex;
+    justify-content: center;
+    border-radius: 0px 20px 20px 0px;
+    padding: 0px 0px 0px 10px;
+    margin-top: 30px;
+    width:80%
+}
+.icon-circle{
+    background-color: #00180e;
+    border-radius: 50px;
+    height: 40px;
+    width:50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 5px;
+}
+.icon{
+    color: white;
+    filter: brightness(0) invert(1);
+    font-size: 20px;
+}
+.content-container{
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+}
+.search-box{
+    background-color: #082c1d;
+    border-radius: 20px;
+    display: flex;
+    gap:15px;
+    padding: 8px;
+    width: 35%;
+    color:#fff;
+}
+.search-icon{
+    color: white;
+    font-size: 25px;
+    margin-left: 20px;
+}
+.search-input{
+    background-color: transparent;
+    border: none;
+    outline: none;
+   width: 100%;
+   color: white;
+   font-family: "Poppins";
+}
+::placeholder { 
+    color: white
+ }
+ .total-cards-container{
+    display:flex;
+    gap:10px;
+ }
+ .cards-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    gap:10px;
+ }
+ .loader-container{
+    height:95vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+ }
+ .check-icon{
+  color:#fff;
+  font-size: 25px;
+  cursor: pointer;
+ }
+@media screen and (max-width: 550px) {
+    .home{
+        min-height: 100vh;
+    }
+    .sidebar{
+        display: none;
+    }
+    .search-box{
+        width: 100%;
+    }
+    .content-container{
+        width: 100%;       
+    }   
+    .total-cards-container{
+        display:flex;
+       flex-direction: column;
+     }
+}
+@media screen and (min-width: 551px) and (max-width:700px) {   
+    .sidebar{
+        display: none;
+    }
+    .content-container{
+        width: 100%;  
+    }   
+    .total-cards-container{
+       flex-direction: column;       
+     }
+}
+@media screen and (max-width:1000px) {   
+    .total-cards-container{
+       flex-direction: column;
+     }
+}
+.loader {
+    color: #fff;
+    font-size: 5px;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    position: relative;
+    left:580px;
+     text-indent: -9999em;
+    animation: mulShdSpin 1.3s infinite linear;
+    transform: translateZ(0);
+  }
+  
+  @keyframes mulShdSpin {
+    0%,
+    100% {
+      box-shadow: 0 -3em 0 0.2em, 
+      2em -2em 0 0em, 3em 0 0 -1em, 
+      2em 2em 0 -1em, 0 3em 0 -1em, 
+      -2em 2em 0 -1em, -3em 0 0 -1em, 
+      -2em -2em 0 0;
+    }
+    12.5% {
+      box-shadow: 0 -3em 0 0, 2em -2em 0 0.2em, 
+      3em 0 0 0, 2em 2em 0 -1em, 0 3em 0 -1em, 
+      -2em 2em 0 -1em, -3em 0 0 -1em, 
+      -2em -2em 0 -1em;
+    }
+    25% {
+      box-shadow: 0 -3em 0 -0.5em, 
+      2em -2em 0 0, 3em 0 0 0.2em, 
+      2em 2em 0 0, 0 3em 0 -1em, 
+      -2em 2em 0 -1em, -3em 0 0 -1em, 
+      -2em -2em 0 -1em;
+    }
+    37.5% {
+      box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em,
+       3em 0em 0 0, 2em 2em 0 0.2em, 0 3em 0 0em, 
+       -2em 2em 0 -1em, -3em 0em 0 -1em, -2em -2em 0 -1em;
+    }
+    50% {
+      box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em,
+       3em 0 0 -1em, 2em 2em 0 0em, 0 3em 0 0.2em, 
+       -2em 2em 0 0, -3em 0em 0 -1em, -2em -2em 0 -1em;
+    }
+    62.5% {
+      box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em,
+       3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 0, 
+       -2em 2em 0 0.2em, -3em 0 0 0, -2em -2em 0 -1em;
+    }
+    75% {
+      box-shadow: 0em -3em 0 -1em, 2em -2em 0 -1em, 
+      3em 0em 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, 
+      -2em 2em 0 0, -3em 0em 0 0.2em, -2em -2em 0 0;
+    }
+    87.5% {
+      box-shadow: 0em -3em 0 0, 2em -2em 0 -1em, 
+      3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, 
+      -2em 2em 0 0, -3em 0em 0 0, -2em -2em 0 0.2em;
+    }
+  }
+    
