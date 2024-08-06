@@ -16,9 +16,13 @@ import WeekCard from "../weekCard/WeekCard";
 import "./Dashboard.css";
 
 const Dashboard = () => {
-  const { searchValue, apiStatus, currentLatLng } = useSelector(
-    (state: RootState) => state.weatherData
-  );
+  const {
+    searchValue,
+    apiStatus,
+    currentLatLng,
+    weatherData,
+    hourlyForcastData,
+  } = useSelector((state: RootState) => state.weatherData);
 
   const dispatch = useDispatch<AppDispatch>();
 
@@ -86,8 +90,9 @@ const Dashboard = () => {
             />
           </div>
           <div className="total-cards-container">
-            {currentLatLng !== null &&
-            (apiStatus?.apiStatus !== "loading" || "failed") ? (
+            {currentLatLng !== null ||
+            weatherData !== null ||
+            hourlyForcastData !== null ? (
               renderCardsView()
             ) : (
               <div className="loader-container">
