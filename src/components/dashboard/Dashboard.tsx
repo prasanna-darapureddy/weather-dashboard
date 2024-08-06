@@ -16,13 +16,8 @@ import WeekCard from "../weekCard/WeekCard";
 import "./Dashboard.css";
 
 const Dashboard = () => {
-  const {
-    searchValue,
-    apiStatus,
-    currentLatLng,
-    weatherData,
-    hourlyForcastData,
-  } = useSelector((state: RootState) => state.weatherData);
+  const { searchValue, currentLatLng, weatherData, hourlyForcastData } =
+    useSelector((state: RootState) => state.weatherData);
 
   const dispatch = useDispatch<AppDispatch>();
 

@@ -71,9 +71,7 @@
  .cards-box{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    width: 100%;
-    height: 100%;
+    width:100%;
     gap:10px;
  }
  .loader-container{
@@ -117,7 +115,7 @@
        flex-direction: column;       
      }
 }
-@media screen and (max-width:1000px) {   
+@media screen and (max-width:1150px) {   
     .total-cards-container{
        flex-direction: column;
      }
