@@ -36,7 +36,8 @@ export const styles = {
     justifyContent: "space-between",
     alignItems: "center",
     borderRadius: "20px",
-    p: 2.5,
+    px: 2.5,
+    py: 2,
   },
   tmrDes: {
     textTransform: "capitalize",

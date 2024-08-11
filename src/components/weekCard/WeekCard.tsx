@@ -38,16 +38,19 @@ const WeekCard = () => {
     return (
       <>
         <Stack sx={styles.cardsBox}>
-          {fiveDaysList &&
-            fiveDaysList?.map((eachItem, index) => (
-              <Fragment key={index + "days"}>
-                <DayTimeWiseBox
-                  date={eachItem.dt_txt}
-                  icon={iconData?.icon}
-                  temp={eachItem.main.temp}
-                />
-              </Fragment>
-            ))}
+          <Typography variant="h6">5 Days</Typography>{" "}
+          <Stack direction={"row"} justifyContent={'space-between'}>
+            {fiveDaysList &&
+              fiveDaysList?.map((eachItem, index) => (
+                <Fragment key={index + "days"}>
+                  <DayTimeWiseBox
+                    date={eachItem.dt_txt}
+                    icon={iconData?.icon}
+                    temp={eachItem.main.temp}
+                  />
+                </Fragment>
+              ))}
+          </Stack>
         </Stack>
       </>
     );
@@ -56,7 +59,6 @@ const WeekCard = () => {
   return (
     <>
       <Box sx={styles.weekTotalCard}>
-        <Typography variant="h6">5 Days</Typography>{" "}
         {hourlyForcastData
           ? renderSuccessView()
           : apiStatus?.apiName === "daysHoursForcast" &&
